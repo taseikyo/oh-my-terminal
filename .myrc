@@ -1,0 +1,49 @@
+# ~/.myrc: executed by bash, zsh or Xsh.
+
+~/remove_duplicate_cmds.py
+
+## Change Directories
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+alias 2='cd ..'
+alias 3='cd ../..'
+alias 4='cd ../../..'
+alias 5='cd ../../../..'
+alias 6='cd ../../../../..'
+
+
+## Git commands
+
+alias gs='git status'
+alias gl='git log --pretty=format:"%C(auto)%h %Cred%an(%ad) %C(auto)%s%d" --graph --date=short'
+
+## History commands
+
+alias h='history'
+alias h1='history 10'
+alias h2='history 20'
+alias h3='history 30'
+
+## List commands
+
+alias l.='ls -d .* --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -hla'
+alias l=ll
+
+## Install & Update utilties
+
+# alias syi='sudo yum install'
+# alias syu='sudo yum update'
+alias sai='sudo apt install'
+alias sau='sudo apt update'
+
+## Get details of a process
+
+alias paux='ps aux | grep'
+
