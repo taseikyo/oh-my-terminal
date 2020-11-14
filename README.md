@@ -37,6 +37,21 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 3. 安装 [Windows Terminal](https://www.microsoft.com/zh-cn/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab)，点击链接会弹出打开微软应用商店的窗口，安装即可
 4. 然后我们需要一个 Linux 发行版，我自己装的是 Ubuntu 20.04。装完后它会出现在开始菜单列表，点击运行，它会装一些东西，然后让你输入用户名密码，完了就可以使用了，暂时先退出，我们先进行下面的步骤
+5. 在这里我漏掉了一步，导致我一直使用的是 wsl1 而不是 wsl2，默认安装版本其实是 wsl1。使用 `wsl --list --verbose` 命令就可以看到 VERSION 是 1，在安装一个 Ubuntu 之前应该使用命令：`wsl --set-default-version 2` 设置默认版本为 wsl2。但其实也没关系，因为有命令可以转换：`wsl --set-version Ubuntu-20.04 2`，在这一步可能有问题，见 [Failure converting WSL1 distro to WSL2](https://github.com/microsoft/WSL/issues/4626)，在我的笔记本上是没问题的，大概两三分钟就转换好了：
+
+```Bash
+PS C:\WINDOWS\system32> wsl --list --verbose
+  NAME            STATE           VERSION
+* Ubuntu-20.04    Stopped         1
+PS C:\WINDOWS\system32> wsl --set-version Ubuntu-20.04 2
+正在进行转换，这可能需要几分钟时间...
+有关与 WSL 2 的主要区别的信息，请访问 https://aka.ms/wsl2
+转换完成。
+PS C:\WINDOWS\system32> wsl --list --verbose
+  NAME            STATE           VERSION
+* Ubuntu-20.04    Stopped         2
+```
+
 
 ## 自定义 terminal
 
