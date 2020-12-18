@@ -215,7 +215,7 @@ code ~/.zshrc
 
 将自定义的 alias 和一些环境变量放入 `~/.myrc`，然后在配置文件（`.zshrc` 和 `.bashrc`）中 source 一下就 OK 了，这里放入了一些常用的命令，比如 `sudo apt install` => `sai`，`ps aux | grep` => `paux`
 
-zsh 和 bash 会记录重复的历史命令，所以我写了个脚本清理，每次登录都会运行改脚本，具体见 [remove_duplicate_cmds.py](https://github.com/taseikyo/backup-utils/blob/master/Python/00E.remove_duplicate_history_cmds.py)，需要自行下载保存到自己的 home 目录（`/home/me/remove_duplicate_cmds.py`）
+zsh 和 bash 会记录重复的历史命令，所以我写了个脚本清理，每次登录都会运行改脚本，具体见 [remove_duplicate_cmds.py](https://github.com/taseikyo/backup-utils/blob/master/Python/00E_remove_duplicate_history_cmds.py)，需要自行下载保存到自己的 home 目录（`/home/me/remove_duplicate_cmds.py`）
 
 enjoy 😁!
 
