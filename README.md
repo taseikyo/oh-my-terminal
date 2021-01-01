@@ -217,6 +217,37 @@ code ~/.zshrc
 
 zsh 和 bash 会记录重复的历史命令，所以我写了个脚本清理，每次登录都会运行改脚本，具体见 [remove_duplicate_cmds.py](https://github.com/taseikyo/backup-utils/blob/master/Python/00E_remove_duplicate_history_cmds.py)，需要自行下载保存到自己的 home 目录（`/home/me/remove_duplicate_cmds.py`）
 
+6. 打开 Windows 程序无需去除 `.exe` 后缀
+
+- https://blog.csdn.net/qq_21415979/article/details/111479223
+
+参考上述 CSDN 链接给出的方法，一共有两个：
+
+```Bash
+# 1. 单个win程序 可以使用别名的方式
+# 打开.zshrc
+vim ~/.zshrc
+# 将以下命令添加到 .zshrc
+# alias adb=adb.exe
+alias 别名=程序名.exe
+
+# 2.多个win程序需要添加则使用以下命令
+# 打开.zshrc 将命令添加到 .zshrc
+vim ~/.zshrc
+
+command_not_found_handler() {
+    if cmd.exe /c "(where $1 || (help $1 |findstr /V Try)) >nul 2>nul && ($* || exit 0)"; then
+        return $?
+    else
+        [[ -x /usr/lib/command-not-found ]] || return 1
+        /usr/lib/command-not-found --no-failure-msg -- ${1+"$1"} && :
+    fi
+}
+
+```
+
+实测第二个方法有效，针不辍！
+
 enjoy 😁!
 
 <p align="center">
