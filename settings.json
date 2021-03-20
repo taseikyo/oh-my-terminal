@@ -73,7 +73,16 @@
                 "source": "Windows.Terminal.Wsl",
                 "icon": "F:/Picture/Ubuntu.png",
                 "startingDirectory": null,
-            }
+            },
+            {
+                "guid": "{41dd7a51-f0e1-4420-a2ec-1a7130b7e950}",
+                "name": "Windows PowerShell Elevated",
+                "commandline": "gsudo.exe powershell.exe",
+                "hidden": false,
+                "colorScheme": "Dracula",
+                "fontFace": "Fira Code",
+                "icon" : "F:/Picture/sudops.png",
+            },
         ]
     },
 

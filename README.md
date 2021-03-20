@@ -109,6 +109,10 @@ Windows Registry Editor Version 5.00
 }
 ```
 
+6. PowerShell 管理员模式
+
+见 [w21@tip#2](https://github.com/taseikyo/arts/blob/master/weekly/202103W4.md#2-windows-terminal-以管理员身份打开-powershell)
+
 ## Ubuntu 换源与更新
 
 ```Bash
