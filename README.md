@@ -5,7 +5,7 @@
 > @Link    : github.com/taseikyo
 
 <p align="center">
-	<a href="#readme"><img src="images/oh-my-terminal.png" alt="oh-my-terminal" title="oh-my-terminal"></a>
+	<a href="#readme"><img src="images/oh-my-terminal.png" alt="oh-my-terminal" title="oh-my-terminal">
 </p>
 
 ## Table of Contents
@@ -52,6 +52,13 @@ PS C:\WINDOWS\system32> wsl --list --verbose
 * Ubuntu-20.04    Stopped         2
 ```
 
+如果升级报错："由于虚拟磁盘系统限制，无法完成请求的操作。虚拟硬盘文件必须是未压缩和未加密的文件，并且不能是稀疏文件。"
+
+那么找到 ubuntu 的文件目录，如："%LOCALAPPDATA%\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc"
+
+右键 "LocalState" -> 属性 -> 高级 -> 取消选择压缩文件（如果加密文件被选择了的话也要取消一下） -> 选择仅此文件夹
+
+再次运行就没问题了
 
 ## 自定义 terminal
 
